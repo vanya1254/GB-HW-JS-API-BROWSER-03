@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  gap: 10%;
+}
+
+#image {
+  max-width: 500px;
+}
+h1 {
+  font-size: 3rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.location svg {
+  width: 22px;
+  height: 22px;
+}
+
+.photographer-p {
+  display: flex;
+  align-items: center;
+}
+.photographer-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+#photographer {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.like-button {
+  background-color: bisque;
+  border: 2px solid #bebebe;
+  font-weight: 700;
+  color: rgb(192, 58, 58);
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.like-button:hover {
+  background-color: rgb(192, 58, 58);
+  color: bisque;
+}
+.like-button:active {
+  opacity: 0.8;
+}
+button[disabled] {
+  background-color: #bebebe;
+  color: #f5f5f5;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+.likes-count {
+  font-weight: bold;
+  color: green;
+}
+
+.after {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.save-button {
+  background-color: #bebebe;
+  border: 1px solid rgb(73, 72, 72);
+  font-weight: 700;
+  color: rgb(73, 72, 72);
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.save-button:hover {
+  background-color: rgb(73, 72, 72);
+  color: #bebebe;
+}
+.save-button:active {
+  opacity: 0.8;
+}
+
+.slider {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.prev,
+.next {
+  margin-top: 60px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.prev:hover,
+.next:hover {
+  transform: scale(1.1);
+}
+.prev:active,
+.next:active {
+  transform: scale(1);
+}
+
+.viewed-img {
+  display: flex;
+  overflow: auto;
+  max-height: 15vh;
+  max-width: 80%;
+  margin-top: 50px;
+  background-color: #bebebe;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.viewed-img::-webkit-scrollbar {
+  display: none;
+}
+
+.viewed-img img {
+  object-fit: cover;
+
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.viewed-img img:hover {
+  transform: scale(0.9);
+}

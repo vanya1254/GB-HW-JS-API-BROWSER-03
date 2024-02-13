@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/checkConfig.js" defer></script>
+    <script src="scripts/fetch.js" defer></script>
+    <script src="scripts/managerLS.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
+    <script src="index.js" defer></script>
+    <title>HW 03</title>
+</head>
+
+<body>
+    <h1>Unsplash Photo Viewer</h1>
+    <div class='image-container'>
+        <img id='image' src='' alt='Random Unsplash Image'>
+    </div>
+    <div class="after">
+        <p class="photographer-p">Photographer: <img class="photographer-img" src="" alt=""> <span
+                id='photographer'></span>
+        </p>
+        <div class="location">
+            <svg xmlns="http://www.w3.org/2000/svg" style="enable-background:new 0 0 128 128" viewBox="0 0 128 128"
+                xml:space="preserve">
+                <path
+                    d="M97.8 15C79.1-3.6 48.9-3.6 30.2 15c-18.6 18.6-18.6 48.9 0 67.6l33.8 33 33.7-33.1c18.7-18.6 18.7-48.9.1-67.5zm-5.7 61.8L64 104.4 35.9 76.9c-7.5-7.5-11.6-17.5-11.6-28.1s4.1-20.6 11.6-28.1S53.4 9 64 9s20.6 4.1 28.1 11.6 11.6 17.5 11.6 28.1c.1 10.7-4.1 20.6-11.6 28.1z" />
+                <path
+                    d="M64 28.3c-11.3 0-20.4 9.2-20.4 20.4S52.7 69.2 64 69.2 84.4 60 84.4 48.8 75.3 28.3 64 28.3zm0 32.9c-6.8 0-12.4-5.6-12.4-12.4S57.2 36.3 64 36.3s12.4 5.6 12.4 12.4S70.8 61.2 64 61.2zM27 119h74v8H27z" />
+            </svg>
+            <p class="location-p"></p>
+        </div>
+        <div class="btns">
+            <div class="like">
+                <span class='likes-count' id='likes-count'>0</span>
+                <button class='like-button' id='like-button'>Like</button>
+            </div>
+            <!-- <div class="save">
+                <button class='save-button' id='save-button'>Save</button>
+                <a href="link.jpg" download='name.jpg' class='save-a' id='save-a'>Save</a>
+            </div> -->
+        </div>
+    </div>
+    <div class="slider">
+        <div class="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px"
+                height="40px" viewBox="0 0 40 40" version="1.1">
+                <g id="surface1">
+                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;"
+                        d="M 27.5 9.015625 L 25.882812 7.5 L 12.5 20 L 25.882812 32.5 L 27.5 30.992188 L 15.742188 20 Z M 27.5 9.015625 " />
+                </g>
+            </svg>
+
+        </div>
+        <div class="viewed-img"></div>
+        <div class="next">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px"
+                height="40px" viewBox="0 0 40 40" version="1.1">
+                <g id="surface1">
+                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;"
+                        d="M 12.5 9.015625 L 14.117188 7.5 L 27.5 20 L 14.117188 32.5 L 12.5 30.992188 L 24.257812 20 Z M 12.5 9.015625 " />
+                </g>
+            </svg>
+        </div>
+    </div>
+</body>
+
+</html>
