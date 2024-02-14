@@ -8,11 +8,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #f5f5f5;
-  gap: 10%;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: fit-content;
+}
 #image {
-  max-width: 500px;
+  height: 100%;
+  /* object-fit: cover; */
 }
 h1 {
   font-size: 3rem;
@@ -121,11 +127,12 @@ button[disabled] {
   align-items: center;
   max-width: 100%;
   justify-content: center;
+  margin: 60px 0;
 }
 
 .prev,
 .next {
-  margin-top: 60px;
+  margin-top: 4px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -143,7 +150,6 @@ button[disabled] {
   overflow: auto;
   max-height: 15vh;
   max-width: 80%;
-  margin-top: 50px;
   background-color: #bebebe;
 
   -moz-user-select: none;
@@ -164,4 +170,43 @@ button[disabled] {
 }
 .viewed-img img:hover {
   transform: scale(0.9);
+}
+
+@media (min-width: 2500px) {
+  .viewed-img {
+    max-width: 2000px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .image-container {
+    width: 80%;
+    height: 250px;
+  }
+}
+
+@media (max-width: 424px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .like-button {
+    padding: 0.5rem 1rem;
+  }
+
+  .image-container {
+    height: 200px;
+  }
+
+  .slider {
+    margin-top: 160px;
+    margin-bottom: 20px;
+  }
 }

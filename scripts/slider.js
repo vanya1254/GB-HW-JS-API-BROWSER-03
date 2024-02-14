@@ -2,7 +2,7 @@
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
 
-  if (config.VIEWED_PHOTOS.length > 0) {
+  if (storage.VIEWED_PHOTOS.length > 0) {
     prev.style.visibility = "visible";
     next.style.visibility = "visible";
   } else {

@@ -41,15 +41,15 @@ const getInitialRndPhoto = async () => {
   const data = await fetchRndPhoto();
 
   updatePhotoEl(data);
-  config.VIEWED_PHOTOS.push(data);
-  updateLSFromConfig();
+  storage.VIEWED_PHOTOS.push(data);
+  updateLSFromStorage();
 };
 getInitialRndPhoto();
 
 ///viewed render
 
 const updateViewedImgEl = () => {
-  [...config.VIEWED_PHOTOS].forEach((photoData) => {
+  [...storage.VIEWED_PHOTOS].forEach((photoData) => {
     let img = document.createElement("img");
     img.src = photoData.urls.small;
     img.dataset.id = photoData.id;
@@ -69,7 +69,7 @@ const updateLikedImgData = (photoData, action) => {
 likeContEl.addEventListener("click", ({ target }) => {
   if (target.id === "like-button") {
     const curPhotoEl = document.querySelector("#image");
-    let curPhotoData = [...config.VIEWED_PHOTOS].find(
+    let curPhotoData = [...storage.VIEWED_PHOTOS].find(
       (photoData) => photoData.id === curPhotoEl.dataset.id
     );
 
@@ -84,7 +84,7 @@ likeContEl.addEventListener("click", ({ target }) => {
     let counterLikes = document.querySelector("#likes-count");
     counterLikes.innerHTML = curPhotoData.likes;
 
-    updateLSFromConfig();
+    updateLSFromStorage();
   }
 });
 
@@ -92,7 +92,7 @@ likeContEl.addEventListener("click", ({ target }) => {
 
 viewedImgEl.addEventListener("click", ({ target }) => {
   if (target.tagName === "IMG") {
-    const clickedImg = [...config.VIEWED_PHOTOS].find(
+    const clickedImg = [...storage.VIEWED_PHOTOS].find(
       (photoData) => photoData.id === target.dataset.id
     );
     updatePhotoEl(clickedImg);
